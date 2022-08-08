@@ -6,16 +6,20 @@ const cryptoKeys = {
   u: 'ufat',
 }
 
+function writeText(text) {
+  const res = document.querySelector('#result');
+  res.innerHTML = text;
+}
+
 function encrypt() {
   let text = document.querySelector('#text').value;
   for(key in cryptoKeys) {
     if(text.indexOf(key) >= 0) {
       let regex = new RegExp(key, 'gi');
-      console.log(regex)
       text = text.replaceAll(regex, cryptoKeys[key]);
     }
   }
-  console.log(text)
+  writeText(text);
 }
 
 document.querySelector('#encrypt').addEventListener('click', encrypt);
