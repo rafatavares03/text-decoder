@@ -43,5 +43,11 @@ function decrypt() {
   encrypted = false;
 }
 
+function copyText() {
+  let text = document.querySelector('#result').innerText;
+  navigator.clipboard.writeText(text);
+}
+
 document.querySelector('#encrypt').addEventListener('click', encrypt);
 document.querySelector('#decrypt').addEventListener('click', decrypt);
+document.querySelector('#copy').addEventListener('click', copyText);
