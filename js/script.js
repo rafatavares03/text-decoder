@@ -1,9 +1,9 @@
 const cryptoKeys = { 
-  e: 'enter',
-  i: 'imes',
-  a: 'ai',
-  o: 'ober',
-  u: 'ufat',
+  e: 'enter', E: 'ENTER',
+  i: 'imes',  I: 'IMES',
+  a: 'ai',    A: 'AI',
+  o: 'ober',  O: 'OBER',
+  u: 'ufat',  U: 'UFAT',
 }
 let encrypted = false;
 
@@ -16,7 +16,7 @@ function encrypt() {
   let text = document.querySelector('#text').value;
   for(key in cryptoKeys) {
     if(text.indexOf(key) >= 0) {
-      let regex = new RegExp(key, 'gi');
+      let regex = new RegExp(key, 'g');
       text = text.replaceAll(regex, cryptoKeys[key]);
     }
   }
@@ -28,14 +28,12 @@ function decrypt() {
   var text;
   if (encrypted) {
     text = document.querySelector('#result').innerText;
-    console.log(text, encrypted, 'result');
   } else {
     text = document.querySelector('#text').value;
-    console.log(text, encrypted, 'textarea');
   }
   for(key in cryptoKeys) {
     if(text.indexOf(cryptoKeys[key]) >= 0) {
-      let regex = new RegExp(cryptoKeys[key], 'gi');
+      let regex = new RegExp(cryptoKeys[key], 'g');
       text = text.replaceAll(regex, key);
     }
   }

@@ -8,13 +8,24 @@
   <title>Text Decoder</title>
 </head>
 <body>
-  <main>
-      <textarea name="text" id="text" cols="30" rows="10"></textarea>
-      <div id="result"></div>
-      <input type="button" value="Criptografar" id="encrypt"/>
-      <input type="button" value="Descriptografar" id="decrypt">
-      <input type="button" value="Copiar" id="copy">
+  <main class="container">
+      <section>
+        <textarea name="text" id="text" cols="30" rows="10" class="text-message" placeholder="Digite sua mensagem..."></textarea>
+        <div class="buttons-container">
+          <input type="button" value="Criptografar" class="button" id="encrypt"/>
+          <input type="button" value="Descriptografar" class="button" id="decrypt">
+        </div>
+      </section>
+      <section class="results-container">
+        <div id="result">
+
+        </div>
+        <input type="button" value="Copiar" class="button copy" id="copy">
+      </section>
   </main>
+  <footer>
+    <a href="https://github.com/rafatavares03" class="autor">&copy; Rafael Tavares</a>
+  </footer>
 </body>
 <script src="./js/script.js"></script>
 </html>
