@@ -15,6 +15,10 @@ body {
   min-height: 100vh;
 }
 
+main >  section{
+  width: 100%;
+}
+
 .button {
   color: white;
   background-color: #0044ff;
@@ -40,7 +44,7 @@ body {
   font-family: inherit;
   font-size: 1.1rem;
   height: 35vh;
-  overflow: scroll;
+  overflow: auto;
   padding: 10px;
   resize: none;
   width: 100%;
@@ -58,7 +62,6 @@ body {
 
 section.results-container {
   position: relative;
-  width: 100%;
 }
 
 #result {
@@ -70,10 +73,31 @@ section.results-container {
   font-family: inherit;
   font-size: 1.1rem;
   height: 37vh;
-  overflow: scroll;
+  overflow: auto;
   padding: 10px 10px 2.5rem 10px;
   resize: none;
   word-break: break-word;
+}
+
+#empty-message {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#empty-message h1 {
+  font-size: 1.5rem;
+}
+
+#empty-message img {
+  display: none;
+}
+
+#empty-message p {
+  font-size: 0.8rem;
 }
 
 .button.copy {
