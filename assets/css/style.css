@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-main >  section{
+main > section {
   width: 100%;
 }
 
@@ -27,6 +27,15 @@ main >  section{
   font-family: inherit;
   font-weight: bold;
   padding: 0.5rem 1.3rem;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: #111d4a;
+}
+
+.hide {
+  display: none;
 }
 
 .container {
@@ -56,8 +65,12 @@ main >  section{
   justify-content: space-around;
 }
 
-.buttons-container > .button {
+.buttons-container .button {
   margin: 1rem 0;
+}
+
+.buttons-container .button:hover {
+  box-shadow: 3px 5px 10px 0px #0044ff;
 }
 
 section.results-container {
@@ -120,4 +133,50 @@ footer {
   color: #0044ff;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media (min-width: 750px) {
+
+  #empty-message img {
+    display: block;
+    max-height: 65%;
+  }
+
+}
+
+@media (min-width: 1020px) {
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 90vh;
+    padding: 40px 80px 30px 80px;
+  }
+
+  .input-area {
+    width: 50vw;
+  }
+
+  .text-message {
+    height: 71vh;
+    width: 100%;
+  }
+
+  .buttons-container .button {
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+
+  .results-container {
+    max-width: 25vw;
+  }
+
+  #result {
+    height: 80vh;
+    margin: auto;
+  }
+
+  #empty-message img {
+    max-width: 100%;
+  }
 }

@@ -7,7 +7,10 @@ const cryptoKeys = {
 }
 let encrypted = false;
 
-function createEmptyMessageElements(resultArea) {
+function createEmptyMessage() {
+  document.querySelector('#copy').classList.add('hide');
+  const resultArea = document.querySelector('#result');
+
   const title = document.createTextNode('Nenhuma mensagem encontrada');
   const h1 = document.createElement('h1');
   h1.appendChild(title);
@@ -28,15 +31,7 @@ function createEmptyMessageElements(resultArea) {
   resultArea.appendChild(message);
 }
 
-function displayEmptyMessage() {
-  const resultArea = document.querySelector('#result');
-  
-  if (resultArea.childNodes.length === 0) {
-    createEmptyMessageElements(resultArea);
-  }
-}
-
-displayEmptyMessage();
+createEmptyMessage();
 
 function detectEmptyField() {
   const text = document.querySelector('#text').value;
@@ -46,12 +41,17 @@ function detectEmptyField() {
 
     if(results.firstChild.id !== 'empty-message') {
       results.removeChild(results.firstChild);
-      displayEmptyMessage();
+      createEmptyMessage();
     }
   }
 }
 
 function writeText(text) {
+  const copyButton = document.querySelector('#copy');
+  if (copyButton.classList.contains('hide')) {
+    copyButton.classList.remove('hide');
+  }
+
   const res = document.querySelector('#result');
   res.innerHTML = text;
 }
@@ -65,8 +65,10 @@ function encrypt() {
     }
   }
 
-  writeText(text);
-  encrypted = true;
+  if (text !== '') {
+    writeText(text);
+    encrypted = false;
+  }
 }
 
 function decrypt() {
