@@ -57,5 +57,5 @@ Autor
  <a href="https://www.facebook.com/rafael.tavares.39904/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></img></a>
  <a href="https://www.instagram.com/rafatavares03/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a>
  <a hrf="https://github.com/rafatavares03"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></img></a>
-  <a hrf="https://www.linkedin.com/in/rafatavares03-dev/"><img src="https://img.shields.io/badge/linktree-1de9b6?style=for-the-badge&logo=linktree&logoColor=white"></img></a>
+  <a hrf="https://www.linkedin.com/in/rafatavares03-dev/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>
 </p>
